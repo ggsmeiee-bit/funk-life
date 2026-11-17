@@ -3,96 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>funk life — Spotify Playlist</title>
+  <title>funk life</title>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at top, #1e1326 0%, #0a0a0c 100%);
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 32px 16px;
+    html, body {
+      height: 100%;
+      background-color: #121212;
+      overflow: hidden;
     }
-    .container {
-      max-width: 680px;
+    iframe {
       width: 100%;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, #1db954, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 6px;
-    }
-    p.subtitle {
-      color: #9ca3af;
-      font-size: 1rem;
-    }
-    .player-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      padding: 16px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-      margin-bottom: 24px;
-    }
-    .spotify-btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background-color: #1db954;
-      color: #000000;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 50px;
-      transition: transform 0.15s ease, background-color 0.2s ease;
-    }
-    .spotify-btn:hover {
-      background-color: #1ed760;
-      transform: translateY(-2px);
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>funk life</h1>
-      <p class="subtitle">Curated by Keagan Kehrhahn · Brazilian Phonk &amp; Funk</p>
-    </header>
-
-    <div class="player-card">
-      <iframe 
-        data-testid="embed-iframe" 
-        style="border-radius:12px" 
-        src="https://spotify.com" 
-        width="100%" 
-        height="520" 
-        frameBorder="0" 
-        allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy">
-      </iframe>
-    </div>
-
-    <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="spotify-btn">
-      Open Full Playlist in Spotify
-    </a>
-  </div>
+  <iframe 
+    data-testid="embed-iframe" 
+    src="https://spotify.com" 
+    allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
 </body>
 </html>
